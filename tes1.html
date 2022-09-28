@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <h1>Punny Web</h1>
+    </div>
+    <div class="text" style="text-align:center ;">
+        <p id="tittle"></p>
+        <p id="data"></p>
+        <p id="count"></p>
+    </div>
+    <script>
+        let content = { 
+            "status" : true,
+            "tittle"  : "Memory",
+            "data" :"Memori adalah urutan byte yang berisi sepotong kecil informasi. Informasi ini mungkin menjadi perintah untuk mengatakan pada computar apa yang harus dilakukan. Sel mungkin berisi data yang diperlukan computar untuk melakukan suatu perintah. Setiap slot mungkin berisi salah satu, dan apa yang sekarang menjadi data mungkin saja kemudian menjadi perintah. Ukuran masing-masing sel, dan jumlah sel, berubah secara hebat dari computar ke computar, dan teknologi dalam pembuatan memori sudah berubah secara hebat - dari relay elektromekanik, ke tabung yang diisi dengan air raksa di mana pulsa akustik terbentuk, sampai matriks magnet permanen, ke setiap transistor, ke sirkuit terpadu dengan jutaan transistor di atas satu chip silikon.",
+        }
+        
+        let tittle = document.getElementById("tittle")
+        let data = document.getElementById("data")
+        let count = document.getElementById("count")
+
+        let tittle_content = content.tittle 
+        let data_content = content.data.replaceAll("computar","komputer")
+        let count_sentences = content.data.split(".").length -1
+
+        tittle.innerHTML = tittle.innerHTML + tittle_content 
+        data.innerHTML = data.innerHTML + data_content
+        count.innerHTML = "jumlah kalimat :" + count.innerHTML +  count_sentences
+    </script>
+</body>
+</html>
